@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fun Study — Bachchon ke liye</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="logo" aria-hidden="true">
+      <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="12" fill="#FFD166"/>
+        <path d="M20 40c4-6 14-6 18 0" stroke="#6A4C93" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="26" cy="26" r="6" fill="#5DD39E"/>
+        <circle cx="38" cy="22" r="4" fill="#4A90E2"/>
+      </svg>
+    </div>
+    <div class="title">
+      <h1>Fun Study</h1>
+      <p class="tag">Padhai ko banaye mazedaar — bachchon ke liye UI</p>
+    </div>
+    <div class="progress" aria-hidden="true">
+      <div class="stars">⭐ <span id="completeCount">0</span> / <span id="totalCount">6</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Topics</h2>
+      <p>Chuno subject aur mazedaar short lessons dekho. Complete karne par confetti aur stars milega!</p>
+    </section>
+
+    <section class="grid" aria-label="Subjects">
+      <!-- Cards -->
+      <article class="card" data-subject="Math" tabindex="0">
+        <div class="emoji">➗</div>
+        <h3>Math</h3>
+        <p>Numbers, shapes aur choti problems.</p>
+        <button class="startBtn" data-subject="Math">Start</button>
+      </article>
+
+      <article class="card" data-subject="Science" tabindex="0">
+        <div class="emoji">🔬</div>
+        <h3>Science</h3>
+        <p>Experiment aur nature ke bare mein.</p>
+        <button class="startBtn" data-subject="Science">Start</button>
+      </article>
+
+      <article class="card" data-subject="English" tabindex="0">
+        <div class="emoji">📚</div>
+        <h3>English</h3>
+        <p>Short stories aur words practice.</p>
+        <button class="startBtn" data-subject="English">Start</button>
+      </article>
+
+      <article class="card" data-subject="Art" tabindex="0">
+        <div class="emoji">🎨</div>
+        <h3>Art</h3>
+        <p>Drawing aur colours!</p>
+        <button class="startBtn" data-subject="Art">Start</button>
+      </article>
+
+      <article class="card" data-subject="Geography" tabindex="0">
+        <div class="emoji">🗺️</div>
+        <h3>Geography</h3>
+        <p>Maps aur duniya ke chhote facts.</p>
+        <button class="startBtn" data-subject="Geography">Start</button>
+      </article>
+
+      <article class="card" data-subject="Fun Quiz" tabindex="0">
+        <div class="emoji">❓</div>
+        <h3>Fun Quiz</h3>
+        <p>Short quizzes, test your brain!</p>
+        <button class="startBtn" data-subject="Fun Quiz">Start</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="lessonModal" role="dialog" aria-modal="true" aria-labelledby="lessonTitle" hidden>
+    <div class="modal-content" role="document">
+      <button class="close" aria-label="Close lesson">&times;</button>
+      <h2 id="lessonTitle"></h2>
+      <div id="lessonBody" class="lesson-body"></div>
+      <div class="modal-actions">
+        <button id="completeBtn" class="completeBtn">Complete ✔</button>
+        <button id="nextBtn" class="nextBtn">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="confetti"></div>
+
+  <footer class="footer">
+    <p>Designed with ❤️ for curious kids.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
